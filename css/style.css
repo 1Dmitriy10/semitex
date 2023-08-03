@@ -912,6 +912,12 @@ label {
   min-height: 268px;
   max-width: 420px;
   min-width: 288px;
+  padding: 48px 28px 48px 100px;
+}
+
+.scheme__item-list-wrap {
+  position: relative;
+  margin-bottom: 28px;
 }
 
 .scheme__tem-title {
@@ -923,6 +929,7 @@ label {
 }
 
 .scheme__item-text {
+  position: relative;
   font-family: FuturaBookC;
   font-size: calc(15px + 3 * ((100vw - 320px) / 961));
   font-weight: 400;

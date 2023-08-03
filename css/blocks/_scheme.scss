@@ -40,39 +40,11 @@ $colorGrad: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
     min-height: 268px;
     max-width: 420px;
     min-width: 288px;
+    padding: 48px 28px 48px 100px;
 }
-// .scheme__item_1 {
-//     &::after{
-//         content: "";
-//         display: flex;
-//         width: 50px;
-//         height: 54px;
-//         // background: linear-gradient(31deg, #041080 8.52%, #0926C0 100%), linear-gradient(40deg, #969AF7 0%, #686EEC 100%), #969AF7;
-//         position: absolute;
-//         top: 97px;
-//         right: -9px;
-//         border-radius: 5px;
-//         transform: skew(-44deg, 51deg);
-//         z-index: -1;
-//     }
-// }
-// .scheme__item_2{
-//     &::before{
-//         content: "";
-//         position: absolute;
-//         display: flex;
-//         width: 50px;
-//         height: 54px;
-//         background: #fff;
-//         top: 97px;
-//         left: -9px;
-//         border-radius: 5px;
-//         transform: skew(-44deg, 51deg);
-//         z-index: 10;
-//     }
-
-// }
 .scheme__item-list-wrap {
+    position: relative;
+    margin-bottom: 28px;
 }
 .scheme__tem-title {
     font-family: FuturaFuturisC;
@@ -82,6 +54,7 @@ $colorGrad: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
     color: $colorWhite;
 }
 .scheme__item-text {
+    position: relative;
     font-family: FuturaBookC;
     @include adaptiveValue(font-size,18 ,15 );
     font-weight: 400;
