@@ -12,3 +12,6 @@ getAnimation()
 // Анимация кнопок продукции
 import { getGradientBtn } from "./productsBtn.js";
 getGradientBtn()
+
+import { sortSchemItems } from "./schemItem.js";
+sortSchemItems()
