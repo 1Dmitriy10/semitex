@@ -1,0 +1,169 @@
+// =========================Импорты==========================
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+// ========================Миксины==============================
+@mixin adaptiveValue ($property, $startSize, $minSize) {
+    $addSize: $startSize - $minSize;
+    // Ширина полотна макета
+    $maxWidth: 1281;                    
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+  }
+//   ====================Переменные=======================
+$colorWhite:#FFF;
+$colorBlack:#111;
+$colorGrad: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
+@function em($px,$size){
+    $result: $px / $size + em;
+    @return $result;
+  }
+  @function rem($px){
+    $result: $px / 16 + rem;
+    @return $result;
+  }
+
+// =================Шрифты=================================================================================
+@font-face {
+    font-family: 'FuturaFuturisC';
+    src: url('../fonts/FuturaFuturisC-Bold.woff2') format('woff2'),
+        url('../fonts/FuturaFuturisC-Bold.woff') format('woff'),
+        url('../fonts/FuturaFuturisC-Bold.ttf') format('truetype'),
+        url('../fonts/FuturaFuturisC-Bold.svg#FuturaFuturisC-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FuturaLightC';
+    src: url('../fonts/FuturaLightC.woff2') format('woff2'),
+        url('../fonts/FuturaLightC.woff') format('woff'),
+        url('../fonts/FuturaLightC.ttf') format('truetype'),
+        url('../fonts/FuturaLightC.svg#FuturaLightC') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FuturaFuturisC';
+    src: url('../fonts/FuturaFuturisC-Bold_1.woff2') format('woff2'),
+        url('../fonts/FuturaFuturisC-Bold_1.woff') format('woff'),
+        url('../fonts/FuturaFuturisC-Bold_1.ttf') format('truetype'),
+        url('../fonts/FuturaFuturisC-Bold_1.svg#FuturaFuturisC-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FuturaBookC';
+    src: url('../fonts/FuturaBookC.woff2') format('woff2'),
+        url('../fonts/FuturaBookC.woff') format('woff'),
+        url('../fonts/FuturaBookC.ttf') format('truetype'),
+        url('../fonts/FuturaBookC.svg#FuturaBookC') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Rg';
+    src: url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Regular.woff') format('woff'),
+        url('../fonts/ProximaNova-Regular.ttf') format('truetype'),
+        url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FuturaDemiC';
+    src: url('../fonts/FuturaDemiC.woff2') format('woff2'),
+        url('../fonts/FuturaDemiC.woff') format('woff'),
+        url('../fonts/FuturaDemiC.ttf') format('truetype'),
+        url('../fonts/FuturaDemiC.svg#FuturaDemiC') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+// =================Обнуление================================================================================
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+  }
+button {
+    cursor: pointer;
+    border: transparent;
+  }
+ul{
+    list-style: none;
+  }
+  a{
+    color: #C0C0C0;
+    font-family: FuturaBookC;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+//   ===================================Общие====================================================================
+.container{
+    max-width: 1281px;
+    margin: 0 auto;
+}
+.btn {
+    border-radius: 10px;
+    background: $colorGrad;
+     color: $colorWhite;
+    text-align: center;
+    font-family: FuturaFuturisC;
+    @include adaptiveValue(font-size,18 ,15 );
+    font-weight: 400;
+    line-height: 19px; /* 105.556% */
+    text-transform: uppercase;
+    padding: 19px 4%;
+}
+.title {
+    text-align: center;
+    font-family: FuturaFuturisC;
+    @include adaptiveValue(font-size,45,25);
+    font-weight: 700;
+    line-height: 99.8%; /* 44.91px */
+    color: $colorBlack;
+}
+.subtitle {
+    text-align: center;
+    font-family: FuturaBookC;
+    @include adaptiveValue(font-size,22 ,15 );
+    font-weight: 400;
+    line-height: 109.091%; /*24px  */
+    color: #030303;
+}
+.slider__item-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.slider__item {
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+    display: flex;
+    position: relative;
+}
+
+// =======Блоки================================
+@import "./blocks/_header.scss";
+@import "./blocks/_components.scss";
+@import "./blocks/_whom.scss";
+@import "./blocks/_why.scss";
+@import "./blocks/_products.scss";
+@import "./blocks/_manufacturer.scss";
+@import "./blocks/_scheme.scss";

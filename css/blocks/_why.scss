@@ -1,0 +1,86 @@
+// ========================Миксины==============================
+@mixin adaptiveValue ($property, $startSize, $minSize) {
+    $addSize: $startSize - $minSize;
+    // Ширина полотна макета
+    $maxWidth: 1281;                    
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+  }
+//   ====================Переменные=======================
+$colorWhite:#FFF;
+$colorBlack:#111;
+$colorGrad: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
+@function em($px,$size){
+    $result: $px / $size + em;
+    @return $result;
+  }
+  @function rem($px){
+    $result: $px / 16 + rem;
+    @return $result;
+  }
+//   
+.why {
+    background: url("./../img/why/why__bg.png") 0 0 no-repeat;
+    background-size: cover;
+}
+.why__container {
+    padding: 14% 5px 10.5% 5px;
+}
+.why__title-box {
+    margin-bottom: 3.8%;
+}
+.why__title {
+    margin-bottom: em(30,80 );
+}
+.why__item-box {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.why__item {
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 31.333%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 30px 0px rgba(9, 38, 192, 0.05);
+    padding: 40px 32px;
+    background: url("../../img/why/why_item-bg.png") right bottom no-repeat;
+    background-color: #FFF;
+}
+.why__item-img-wrap{
+    align-self: center;
+    margin-bottom: 8%;
+    width: 47%;
+    max-width: 157px;
+    transition: 200ms;
+    &:hover{
+        transition: 200ms;
+        transform: scale(1.03);
+    }
+}
+.why__item-link{
+    transition: 200ms;;
+    &:hover{
+        transition: 200ms;
+        transform: scale(1.03);
+    }
+}
+.why__item-img {
+    width: 100%;
+}
+.why__item-title {
+    text-align: center;
+    font-family: FuturaFuturisC;
+    @include adaptiveValue(font-size,20,15 );
+    font-weight: 700;
+    color: #2A336C;
+    margin-bottom: 13px;
+}
+.why__item-text {
+    text-align: center;
+    font-family: FuturaBookC;
+    @include adaptiveValue(font-size,20,15 );
+    font-weight: 400;
+    line-height: 110%; /*22px  */
+    color: #555;
+}

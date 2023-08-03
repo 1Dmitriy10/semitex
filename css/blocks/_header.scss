@@ -1,0 +1,210 @@
+// ==============Миксины=============================
+@mixin adaptiveValue ($property, $startSize, $minSize) {
+    $addSize: $startSize - $minSize;
+    // Ширина полотна макета
+    $maxWidth: 1281;                    
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth - 375}));
+  }
+//   ====================Переменные=======================
+$colorWhite:#FFF;
+@function em($px,$size){
+    $result: $px / $size + em;
+    @return $result;
+  }
+  @function rem($px){
+    $result: $px / 16 + rem;
+    @return $result;
+  }
+//   ==============Основное==================================
+.header {
+    font-family: FuturaLightC;
+}
+.header__container {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    min-height: 130px;
+    @media (max-width:900px) {
+        justify-content: center;
+    }
+}
+.header__logo {
+    flex: 0 0 155px;
+    height: auto;
+    @include adaptiveValue("margin-right",63,20); 
+    @media (max-width:480px) {
+        flex: 0 1 130px;
+    }
+    @media (min-width:1285px) {
+        margin-right: 63px;
+    }
+}
+.header__logo-img{
+    width: 100%;
+}
+
+.header__menu-wrap {
+    @include adaptiveValue(margin-right,38 ,15 );
+    flex: 0 1 auto;
+    @media (max-width:900px) {
+        display: none;
+    }
+}
+.header__menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    & :not(:last-child){
+        padding-right: 27px;
+    }
+    padding: 5px;
+}
+.header__menu-item{
+    &:hover{
+            transition: 5ms;
+            transform: scale(101%);
+        }
+}
+.header__menu-link {
+    color: $colorWhite;
+    font-size: rem(18);
+    font-weight: 300;
+    line-height: 122.8%;
+    @media (max-width: 900px) {
+        font-size: rem(25);
+    }
+}
+.header__contacts {
+    color: $colorWhite;
+    @include adaptiveValue(font-size,18 ,15 );
+    font-weight: 700;
+    line-height: em(21.96,18);
+    position: relative;
+    padding-left: 42px;
+    flex: 0 0 213px;
+    &::before{
+        content: "";
+        display: flex;
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        position: absolute;
+        top: -5px;
+        left: 0;
+        background: url("../../img/header/logo_phone.svg");
+    }
+    @media (max-width:480px) {
+        flex: 0 1 130px;
+        flex: 0 1 327px;
+    }
+    &:hover{
+        transition: 5ms;
+        transform: scale(101%);
+    }
+    @media (min-width:1285px) {
+        font-size: 18px;
+    }
+}
+// ============Мобильное меню=======
+.burger-menu-wrap{
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    z-index: 20;
+    &:hover{
+        transform: scale(90%);
+    }
+    @media (max-width:900px) {
+        display: flex;
+    }
+}
+.burger-menu{
+    display: flex;
+    width: 40px;
+    height: 3px;
+    background-color: #fff;
+    position: relative;
+    z-index: 20;
+    &::before{
+        content: "";
+        display: flex;
+        width: 40px;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+        top: 12px;
+        transition: 0.5s;
+    }
+    &::after{
+        content: "";
+        display: flex;
+        width: 40px;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+        top: -12px;
+        transition: 0.5s;
+    }
+    &.active{
+        display: flex;
+        width: 40px;
+        height: 0;
+        background-color: #fff;
+        position: relative;
+        &::before{
+            content: "";
+            display: flex;
+            width: 40px;
+            height: 3px;
+            background-color: #fff;
+            position: absolute;
+            top: 0;
+            transform: rotate(45deg);
+            transition: 0.5s;
+        }
+        &::after{
+            content: "";
+            display: flex;
+            width: 40px;
+            height: 3px;
+            background-color: #fff;
+            position: absolute;
+            top: 0;
+            transform: rotate(-45deg);
+            transition: 0.5s;
+        }
+    }
+}
+// Мобильное меню
+.nav_box-mob{
+    padding: 25px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(-436px);
+    background-color: #07086C;
+    &.active{
+        transition: 0.5s;
+        opacity: 1;
+        transform: translateY(0);
+        z-index: 10;
+    }
+}
+.nav_box-mob-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.title-box {
+}
+

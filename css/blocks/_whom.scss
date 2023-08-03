@@ -1,0 +1,86 @@
+// ========================Миксины==============================
+@mixin adaptiveValue ($property, $startSize, $minSize) {
+    $addSize: $startSize - $minSize;
+    // Ширина полотна макета
+    $maxWidth: 1281;                    
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+  }
+//   ====================Переменные=======================
+$colorWhite:#FFF;
+$colorBlack:#111;
+$colorGrad: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
+ //   ==============Основное==================================
+.whom {
+    background: #FFF;
+}
+.whom__container {
+    padding: 6.5% 5px 5% 5px;
+    display: flex;
+    flex-direction: column;
+}
+.whom__title {
+    margin-bottom: em(49,45);
+}
+.whom__item-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    list-style: decimal;
+    flex-wrap: wrap;
+    margin-bottom: 10%;
+}
+.whom__item {
+    border-radius: 20px;
+    padding: 25px 20px;
+    display: flex;
+    flex: 1 1 31.333%;
+    min-height: 336px;
+    position: relative;
+    min-height: 336px;
+    min-width: 320px;
+    &:hover{
+        opacity: 0.5;
+        transform: scale(1.02);
+    }
+}
+.whom__item-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.whom__item-title-wrap{
+    position: relative;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+}
+.whom__item-title {
+    font-family: FuturaDemiC;
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 147.826%; /* 34px */
+    color: $colorWhite;
+}
+.whom__item-title-number{
+    text-align: center;
+    font-family: FuturaFuturisC;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 105.983%; /* 19.077px */
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 31px;
+    height: 31px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    margin-right: 24px;
+}
+.whom__btn{
+    align-self: center;
+}

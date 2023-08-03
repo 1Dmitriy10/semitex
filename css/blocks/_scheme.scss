@@ -1,0 +1,89 @@
+// ========================Миксины==============================
+@mixin adaptiveValue ($property, $startSize, $minSize) {
+    $addSize: $startSize - $minSize;
+    // Ширина полотна макета
+    $maxWidth: 1281;                    
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+  }
+//   ====================Переменные=======================
+$colorWhite:#FFF;
+$colorBlack:#111;
+$colorGrad: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
+@function em($px,$size){
+    $result: $px / $size + em;
+    @return $result;
+  }
+  @function rem($px){
+    $result: $px / 16 + rem;
+    @return $result;
+  }
+
+// 
+.scheme {
+    height: 800px;
+}
+.scheme__container {
+    padding: 3% 5px 0 5px;
+}
+.scheme__title {
+    margin-bottom: 4%;
+}
+.scheme__item-box {
+    display: flex;
+}
+.scheme__item {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 33.333%;
+    border-radius: 15px;
+    background: linear-gradient(136deg, #041080 8.52%, #0926C0 100%), #969AF7;
+    position: relative;
+    min-height: 268px;
+}
+.scheme__item_1 {
+    &::after{
+        content: "";
+        display: flex;
+        width: 50px;
+        height: 54px;
+        background: linear-gradient(31deg, #041080 8.52%, #0926C0 100%), linear-gradient(40deg, #969AF7 0%, #686EEC 100%), #969AF7;
+        position: absolute;
+        top: 97px;
+        right: -9px;
+        border-radius: 5px;
+        transform: skew(-44deg, 51deg);
+        z-index: -1;
+    }
+}
+.scheme__item_2{
+    &::before{
+        content: "";
+        position: absolute;
+        display: flex;
+        width: 50px;
+        height: 54px;
+        background: #fff;
+        top: 97px;
+        left: -9px;
+        border-radius: 5px;
+        transform: skew(-44deg, 51deg);
+        z-index: 10;
+    }
+
+}
+.scheme__item-list-wrap {
+}
+.scheme__tem-title {
+    font-family: FuturaFuturisC;
+    @include adaptiveValue(font-size,18 ,15 );
+    font-weight: 700;
+    line-height: 138.889%; /* 25px */
+    color: $colorWhite;
+}
+.scheme__item-text {
+    font-family: FuturaBookC;
+    @include adaptiveValue(font-size,18 ,15 );
+    font-weight: 400;
+    line-height: 138.889%; /*25px  */
+    color: #E3E3E3;
+}
