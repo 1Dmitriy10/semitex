@@ -15,10 +15,17 @@ export function getList() {
         list = document.querySelectorAll(".scheme__item-list-wrap");
         for(let el of list) {
             ++num;
-            el.insertAdjacentHTML('afterbegin',
+            if(num < 10) {
+                el.insertAdjacentHTML('afterbegin',
             `
-            <span class="whom__item-title-number">${num}</span>
+            <span class="scheme__item-number">0${num}</span>
             `);
+            }else{
+                el.insertAdjacentHTML('afterbegin',
+            `
+            <span class="scheme__item-number">${num}</span>
+            `);
+            }
         }
     }
     getNumbersWhyList()
