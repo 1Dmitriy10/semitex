@@ -158,6 +158,14 @@ ul{
     display: flex;
     position: relative;
 }
+.slider__item-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: none;
+}
 
 // =======Блоки================================
 @import "./blocks/_header.scss";
@@ -167,3 +175,4 @@ ul{
 @import "./blocks/_products.scss";
 @import "./blocks/_manufacturer.scss";
 @import "./blocks/_scheme.scss";
+@import "./blocks/_certificates.scss";
