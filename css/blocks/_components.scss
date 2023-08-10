@@ -92,13 +92,23 @@ text-transform: uppercase;
     padding-left: 21px;
     &::before{
         content: "";
-        background: url("../img/components/check_components.svg");
+        background: url("../img/components/check_components.svg") 0 0 no-repeat;
         width: 14px;
         height: 11px;
+
+
         display: flex;
         position: absolute;
-        top: 8px;
+        top: 25%;
         left: 0;
+        @media (min-width: 1640px) {
+            background: url("../img/components/check_components.svg") 0 0/contain no-repeat;
+            width: 26px;
+            height: 17px;
+        }
+    }
+    @media (min-width: 1640px) {
+        padding-left: 40px;
     }
 }
 .components__form {
