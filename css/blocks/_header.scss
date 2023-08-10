@@ -60,9 +60,9 @@ $colorWhite:#FFF;
 }
 .header__menu-item{
     &:hover{
-            transition: 5ms;
-            transform: scale(101%);
-        }
+        transition: 5ms;
+        opacity: 0.8;
+    }
 }
 .header__menu-link {
     color: $colorWhite;
@@ -90,7 +90,7 @@ $colorWhite:#FFF;
         position: absolute;
         top: -5px;
         left: 0;
-        background: url("../../img/header/logo_phone.svg");
+        background: url("../img/header/logo_phone.svg");
     }
     @media (max-width:480px) {
         flex: 0 1 130px;
@@ -204,7 +204,5 @@ $colorWhite:#FFF;
     flex-direction: column;
     align-items: center;
     gap: 30px;
-}
-.title-box {
 }
 

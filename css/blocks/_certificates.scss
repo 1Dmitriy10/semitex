@@ -1,6 +1,7 @@
 .certificates {
-    background: url("../../img/certificates/certificates__bg1.png") 0 0 no-repeat;
+    background: url("../img/certificates/certificates__bg1.png") 52% 0/cover no-repeat;
     margin-top: 5.8%;
+    position: relative;
 }
 .certificates__container {
     padding: 9.6% 5px 10% 5px;
@@ -9,36 +10,19 @@
     color: #FFF;
     margin-bottom: 4.2%;
 }
-.swiper {
-}
-.certificates__slider {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
-.slider__item-wrap {
-}
-.slider__item {
-}
-.manufacturer__slider-item {
-}
-.manufacturer__item-img {
-}
-.slider-button-prev {
-}
 .certificates__slider-button-prev {
-}
-.slider-button-next {
+    top: 54%;
 }
 .certificates__slider-button-next {
+    top: 54%;
 }
 .certificates__slider-item{
     width: 225px;
     height: 329px;
     padding: 45px 60px;
     position: relative;
-    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+            box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
 }
 .certificates__item-img{
     border-radius: 10px;

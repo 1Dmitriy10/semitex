@@ -19,7 +19,7 @@ $colorGrad: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
   }
 //   
 .why {
-    background: url("./../img/why/why__bg.png") 0 0 no-repeat;
+    background: url("../img/why/why__bg.png") 0 0 no-repeat;
     background-size: cover;
 }
 .why__container {
@@ -44,7 +44,7 @@ $colorGrad: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
     border-radius: 10px;
     box-shadow: 0px 4px 30px 0px rgba(9, 38, 192, 0.05);
     padding: 40px 32px;
-    background: url("../../img/why/why_item-bg.png") right bottom no-repeat;
+    background: url("../img/why/why_item-bg.png") right bottom no-repeat;
     background-color: #FFF;
 }
 .why__item-img-wrap{

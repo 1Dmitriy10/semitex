@@ -18,8 +18,8 @@ $colorGrad: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
   }
   //   ==============Основное==================================
 .components {
-    background: url("./../img/components/components_bg.svg") 0 0 no-repeat;
-    background-size: cover;
+    background: url("../img/components/components__bg.png") 0 0/cover  no-repeat;
+    
     margin-top: -180px;
 }
 .components__container {
@@ -92,7 +92,7 @@ text-transform: uppercase;
     padding-left: 21px;
     &::before{
         content: "";
-        background: url("../../img/components/check_components.svg");
+        background: url("../img/components/check_components.svg");
         width: 14px;
         height: 11px;
         display: flex;
@@ -116,6 +116,7 @@ text-transform: uppercase;
     flex-direction: column;
     flex: 0 1 380px;
     height: fit-content;
+    position: relative;
 }
 .components__form{
     @media (max-width:1000px) {
@@ -198,7 +199,7 @@ label{
         position: absolute;
         top: 0;
         left: 0;
-        background: url("../../img/components/form_lock.svg") 0 0 no-repeat;
+        background: url("../img/components/form_lock.svg") 0 0 no-repeat;
         width: 16px;
         height: 16px;
     }

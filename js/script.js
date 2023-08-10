@@ -14,6 +14,9 @@ getAnimation()
 // Анимация кнопок продукции
 import { getGradientBtn } from "./productsBtn.js";
 getGradientBtn()
+// Автоперестроение элементов 'Схема работы'
+import { sortSchemeItems } from "./schemeItem.js";
+sortSchemeItems()
 
-import { sortSchemItems } from "./schemItem.js";
-sortSchemItems()
+import { getPopup } from "./popup.js";
+getPopup()

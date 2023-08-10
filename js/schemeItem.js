@@ -1,4 +1,4 @@
-export function sortSchemItems() {
+export function sortSchemeItems() {
     const img = document.querySelectorAll('.scheme__item-img');
     const bg = document.querySelectorAll('.scheme__item-bg');
     let positionX=img[0].getBoundingClientRect().top;
