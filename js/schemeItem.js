@@ -8,7 +8,12 @@ export function sortSchemeItems() {
     for(const el of img) {
         el.src = "./img/scheme/schem__item-bg-2.png"
     }
-    bg[img.length-1].style.cssText = 'display: none'
+    // bg[img.length-1].style.cssText = 'display: none'
+    bg[img.length-1].src = "./img/scheme/scheme__item-bg-4.png"
+    bg[img.length-1].style.cssText = `
+                width: auto;
+                height: auto;
+                right: 0;`
     }else{
     for(const el of img) {
         i++
@@ -23,11 +28,20 @@ export function sortSchemeItems() {
                 positionX = el.getBoundingClientRect().top
                 el.src = "./img/scheme/schem__item-bg-1.png"
                 img[i -2].src = "./img/scheme/schem__item-bg-3.png"
-                bg[i -2].style.cssText = 'left: 10%'
+                bg[i -2].src = "./img/scheme/scheme__item-bg-4.png"
+                bg[i -2].style.cssText = `
+                width: auto;
+                height: auto;
+                right: 0;`
+
             }  
         }
     }
-    bg[img.length-1].style.cssText = 'left: 10%'
+    bg[img.length-1].src = "./img/scheme/scheme__item-bg-4.png"
+    bg[img.length-1].style.cssText = `
+                width: auto;
+                height: auto;
+                right: 0;`
     }
     img[0].src ="./img/scheme/schem__item-bg-1.png"
     img[img.length-1].src ="./img/scheme/schem__item-bg-3.png"

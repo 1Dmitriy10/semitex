@@ -31,3 +31,4 @@ export function getList() {
     getNumbersWhyList()
     getNumbersSchemeList()
 }
+getList()
