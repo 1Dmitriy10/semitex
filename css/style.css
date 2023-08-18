@@ -1139,15 +1139,20 @@ label {
   position: relative;
   display: flex;
   flex: 0 1 35.5%;
-  height: calc(220px + 304 * ((100vw - 320px) / 961));
+  height: calc(300px + 224 * ((100vw - 320px) / 961));
   max-height: 576px;
   margin-right: 40px;
-  min-width: 350px;
+  min-width: 380px;
+}
+@media (max-width: 600px) {
+  .chois__img-wrap {
+    min-width: 400px;
+  }
 }
 @media (max-width: 955px) {
   .chois__img-wrap {
-    min-width: 285px;
     margin-bottom: 10%;
+    min-width: 285px;
   }
 }
 

@@ -38,13 +38,16 @@ $colorGrad: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
     position: relative;
     display: flex;
     flex: 0 1 35.5%;
-    @include adaptiveValue(height, 524, 220);
+    @include adaptiveValue(height, 524, 300);
     max-height: 576px;
     margin-right: 40px;
-    min-width: 350px;
+    min-width: 380px;
+    @media (max-width: 600px) {
+        min-width: 400px;
+    }
     @media (max-width: 955px) {
-        min-width: 285px;
         margin-bottom: 10%;
+        min-width: 285px;
     }
 }
 .chois__img-1{
