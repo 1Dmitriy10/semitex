@@ -28,6 +28,26 @@ export function getList() {
             }
         }
     }
+
+    function getNumbersChoisList() {
+        let list = [], num = 0;
+        list = document.querySelectorAll(".chois__item");
+        for(let el of list) {
+            ++num;
+            if(num < 10) {
+                el.insertAdjacentHTML('afterbegin',
+            `
+            <span class="chois__item-number">0${num}</span>
+            `);
+            }else{
+                el.insertAdjacentHTML('afterbegin',
+            `
+            <span class="chois__item-number">${num}</span>
+            `);
+            }
+        }
+    }
+    getNumbersChoisList()
     getNumbersWhyList()
     getNumbersSchemeList()
 }

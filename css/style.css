@@ -843,7 +843,6 @@ label {
   flex-direction: column;
   flex: 1 1 23%;
   min-width: 290px;
-  max-width: 400px;
 }
 
 .products__item-top {
@@ -1128,6 +1127,13 @@ label {
 .chois__wrap {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 1000px) {
+  .chois__wrap {
+    justify-content: center;
+    gap: 35px;
+  }
 }
 
 .chois__img-wrap {
@@ -1136,6 +1142,13 @@ label {
   flex: 0 1 35.5%;
   height: calc(220px + 304 * ((100vw - 320px) / 961));
   max-height: 576px;
+  margin-right: 30px;
+  min-width: 347px;
+}
+@media (max-width: 1000px) {
+  .chois__img-wrap {
+    min-width: 285px;
+  }
 }
 
 .chois__img-1 {
@@ -1157,14 +1170,27 @@ label {
 .chois__content-wrap {
   display: flex;
   flex-direction: column;
-  flex: 0 0 50%;
+  flex: 0 0 55%;
+}
+@media (max-width: 1000px) {
+  .chois__content-wrap {
+    flex: 1 1 55%;
+    padding: 0 20px;
+  }
 }
 
 .chois__item-box {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 16px;
+  grid-row-gap: 11px;
+  grid-column-gap: 22px;
+  margin-bottom: 6.5%;
+}
+@media (max-width: 650px) {
+  .chois__item-box {
+    flex-direction: row;
+  }
 }
 
 .chois__item {
@@ -1172,7 +1198,15 @@ label {
   background: #969AF7;
   width: 48.6%;
   min-height: 129px;
-  padding: 27px 25px 27px 41px;
+  padding: 27px 25px 27px 55px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 650px) {
+  .chois__item {
+    flex: 1 1 100%;
+  }
 }
 
 .chois__item-text {
@@ -1180,4 +1214,30 @@ label {
   font-size: calc(15px + 5 * ((100vw - 320px) / 961));
   font-weight: 400;
   color: #FFF;
+}
+
+.chois__btn {
+  align-self: flex-start;
+}
+@media (max-width: 1000px) {
+  .chois__btn {
+    align-self: center;
+  }
+}
+
+.chois__item-number {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: url("../img/chois/chois__item-number-bg.svg") 0 0/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: FuturaFuturisC;
+  font-size: calc(15px + 5.588 * ((100vw - 320px) / 961));
+  font-weight: 700;
+  line-height: 108.5%; /* 22.338px */
+  color: #FFF;
+  top: 15%;
+  left: -22px;
 }/*# sourceMappingURL=style.css.map */
