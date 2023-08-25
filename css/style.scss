@@ -20,6 +20,10 @@ $colorGrad: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
     $result: $px / 16 + rem;
     @return $result;
   }
+  @function prop($h,$w){
+    $result: $h / $w * 100%;
+    @return $result;
+  }
 
 // =================Шрифты=================================================================================
 @font-face {
@@ -122,12 +126,12 @@ ul{
 .btn {
     border-radius: 10px;
     background: $colorGrad;
-     color: $colorWhite;
+    color: $colorWhite;
     text-align: center;
     font-family: FuturaFuturisC;
     @include adaptiveValue(font-size,18 ,15 );
     font-weight: 400;
-    line-height: 19px; /* 105.556% */
+    line-height: 105.556%; /* 19px */
     text-transform: uppercase;
     padding: 19px 4%;
 }
@@ -244,3 +248,4 @@ ul{
 @import "./blocks/_scheme.scss";
 @import "./blocks/_certificates.scss";
 @import "./blocks/_chois.scss";
+@import "./blocks/_about.scss";
