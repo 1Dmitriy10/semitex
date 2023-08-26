@@ -31,13 +31,20 @@ $colorGrad: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
         flex-wrap: wrap;
         justify-content: center;
     }
+    @media (max-width:425px) {
+        padding: 180px 5px 20px 5px;
+    }
 }
 .components__content-box {
     max-width: 846px;
     margin-bottom: 14%;
+    text-align: start;
     @media (max-width:1000px) {
         flex-wrap: wrap;
         margin-bottom: 6%;
+    }
+    @media (max-width:800px) {
+        text-align: center;
     }
 }
 .components__title {
@@ -80,6 +87,9 @@ text-transform: uppercase;
     display: flex;
     flex-direction: column;
     gap: 5px;
+    @media (max-width:800px) {
+        text-align: start;
+    }
 }
 .components__list-item {
     font-family: FuturaBookC;
@@ -95,8 +105,6 @@ text-transform: uppercase;
         background: url("../img/components/check_components.svg") 0 0 no-repeat;
         width: 14px;
         height: 11px;
-
-
         display: flex;
         position: absolute;
         top: 25%;
@@ -105,6 +113,9 @@ text-transform: uppercase;
             background: url("../img/components/check_components.svg") 0 0/contain no-repeat;
             width: 26px;
             height: 17px;
+        }
+        @media (min-width:800px) {
+           text-align: start;
         }
     }
     @media (min-width: 1640px) {
@@ -116,6 +127,9 @@ text-transform: uppercase;
     flex: 0 1 380px;
     @media (max-width:1000px) {
         margin-bottom: 18%;
+    }
+    @media (max-width:425px) {
+        display: none !important;
     }
 }
 .form { 

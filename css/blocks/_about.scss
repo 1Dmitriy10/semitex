@@ -76,6 +76,9 @@ $colorGrad: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
     flex-direction: column;
     flex: 1 0 54%;
     gap: 20px;
+    @media (max-width:425px) {
+        display: none;
+    }
 }
 .about__box-item {
     display: flex;

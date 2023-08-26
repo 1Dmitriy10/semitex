@@ -24,9 +24,6 @@ $colorWhite:#FFF;
     align-items: center;
     padding: 5px;
     min-height: 130px;
-    @media (max-width:900px) {
-        justify-content: center;
-    }
 }
 .header__logo {
     flex: 0 0 155px;

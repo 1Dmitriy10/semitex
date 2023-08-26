@@ -211,11 +211,6 @@ a {
   padding: 5px;
   min-height: 130px;
 }
-@media (max-width: 900px) {
-  .header__container {
-    justify-content: center;
-  }
-}
 
 .header__logo {
   flex: 0 0 155px;
@@ -431,15 +426,26 @@ a {
     justify-content: center;
   }
 }
+@media (max-width: 425px) {
+  .components__container {
+    padding: 180px 5px 20px 5px;
+  }
+}
 
 .components__content-box {
   max-width: 846px;
   margin-bottom: 14%;
+  text-align: start;
 }
 @media (max-width: 1000px) {
   .components__content-box {
     flex-wrap: wrap;
     margin-bottom: 6%;
+  }
+}
+@media (max-width: 800px) {
+  .components__content-box {
+    text-align: center;
   }
 }
 
@@ -492,6 +498,11 @@ a {
   flex-direction: column;
   gap: 5px;
 }
+@media (max-width: 800px) {
+  .components__list {
+    text-align: start;
+  }
+}
 
 .components__list-item {
   font-family: FuturaBookC;
@@ -520,6 +531,11 @@ a {
     height: 17px;
   }
 }
+@media (min-width: 800px) {
+  .components__list-item::before {
+    text-align: start;
+  }
+}
 @media (min-width: 1640px) {
   .components__list-item {
     padding-left: 40px;
@@ -533,6 +549,11 @@ a {
 @media (max-width: 1000px) {
   .components__form {
     margin-bottom: 18%;
+  }
+}
+@media (max-width: 425px) {
+  .components__form {
+    display: none !important;
   }
 }
 
@@ -1007,7 +1028,7 @@ label {
     max-width: 550px;
     flex: 0 1 78%;
     min-width: 339px;
-    padding: 4% 28px 4% 30px;
+    padding: 6% 38px 4% 100px;
   }
 }
 
@@ -1017,12 +1038,6 @@ label {
   display: flex;
   align-items: center;
 }
-@media (max-width: 800px) {
-  .scheme__item-list-wrap {
-    flex-direction: column;
-  }
-}
-
 .scheme__tem-title {
   font-family: FuturaFuturisC;
   font-size: calc(15px + 3 * ((100vw - 320px) / 961));
@@ -1060,14 +1075,6 @@ label {
   color: #969AF7;
   left: -60px;
   top: -10px;
-}
-@media (max-width: 800px) {
-  .scheme__item-number {
-    position: relative;
-    margin-bottom: 20px;
-    top: auto;
-    left: auto;
-  }
 }
 
 .scheme__item-bg {
@@ -1241,12 +1248,19 @@ label {
   justify-content: center;
   align-items: center;
   font-family: FuturaFuturisC;
-  font-size: calc(15px + 5.588 * ((100vw - 320px) / 961));
+  font-size: 20.588px;
   font-weight: 700;
   line-height: 108.5%; /* 22.338px */
   color: #FFF;
   top: 15%;
   left: -22px;
+}
+@media (max-width: 920px) {
+  .chois__item-number {
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+  }
 }
 
 .about__container {
@@ -1311,6 +1325,11 @@ label {
   flex-direction: column;
   flex: 1 0 54%;
   gap: 20px;
+}
+@media (max-width: 425px) {
+  .about__wrap-card {
+    display: none;
+  }
 }
 
 .about__box-item {
