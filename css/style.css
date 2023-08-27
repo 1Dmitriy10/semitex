@@ -1441,7 +1441,7 @@ label {
 
 .delivery__container {
   display: flex;
-  padding: 6% 5px 19% 5px;
+  padding: 11.5% 5px 19% 5px;
   flex-wrap: wrap;
 }
 
@@ -1457,16 +1457,6 @@ label {
   border-radius: 10px;
   background: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
 }
-@media (max-width: 590px) {
-  .delivery__bg {
-    padding-bottom: 53.8461538462%;
-  }
-}
-@media (max-width: 466px) {
-  .delivery__bg {
-    padding-bottom: 46.1538461538%;
-  }
-}
 
 .delivery__map {
   width: 97.3%;
@@ -1478,7 +1468,7 @@ label {
 }
 @media (max-width: 803px) {
   .delivery__map {
-    height: calc(100px + 850 * ((100vw - 320px) / 961));
+    height: calc(190px + 660 * ((100vw - 320px) / 961));
   }
 }
 @media (max-width: 545px) {

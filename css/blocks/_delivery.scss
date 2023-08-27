@@ -32,7 +32,7 @@ $colorGrad: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
 }
 .delivery__container {
     display: flex;
-    padding: 6% 5px 19% 5px;
+    padding: 11.5% 5px 19% 5px;
     flex-wrap: wrap;
 }
 .delivery__wrap-map {
@@ -45,12 +45,12 @@ $colorGrad: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
     padding-bottom: prop(448, 668.56);  
     border-radius: 10px;
     background: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
-    @media (max-width:590px) {
-      padding-bottom: prop(350, 650);
-    } 
-    @media (max-width:466px) {
-      padding-bottom: prop(300, 650);
-    }   
+    // @media (max-width:590px) {
+    //   padding-bottom: prop(350, 650);
+    // } 
+    // @media (max-width:466px) {
+    //   padding-bottom: prop(300, 650);
+    // }   
 
 }
 .delivery__map{
@@ -61,8 +61,9 @@ $colorGrad: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
   left: 16px;
   border-radius: 10px;
   @media (max-width:803px) {
-    @include adaptiveValue(height,950 ,100 );
+    @include adaptiveValue(height,850 ,190 );
   }
+  
   @media (max-width:545px) {
     width: 95.3%;
     top: 10px;
