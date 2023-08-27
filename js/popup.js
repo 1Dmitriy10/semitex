@@ -3,9 +3,12 @@ export function getPopup() {
     const btn = document.querySelectorAll(".btn-form")
     const popupBg = document.querySelector(".popup-bg")
     const body = document.querySelector("body")
+    let count = 1;
 
     for(const el of btn){
+        el.id = count
         el.addEventListener("click", toggleActiveClass)
+        count++
     }
     for(const el of exitBtn){
         el.addEventListener("click", toggleActiveClass)

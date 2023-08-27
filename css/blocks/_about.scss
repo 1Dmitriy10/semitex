@@ -24,11 +24,22 @@ $colorGrad: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
 // ======================================
 
 .about {
+    margin-top: -72px;
+    background: url("../img/about/about-bg.png") 32% 0/cover no-repeat;
 }
 .about__container {
     display: flex;
-    padding: 10.5% 5px 10% 5px;
+    padding: 10.5% 5px 9% 5px;
     flex-wrap: wrap-reverse;
+    @media (max-width:1010px) {
+        padding: 10.5% 5px 25% 5px;
+    }
+    @media (max-width:645px) {
+        padding: 10.5% 5px 37% 5px;
+    }
+    @media (max-width:450px) {
+        padding: 10.5% 5px 46% 5px;
+    }
 }
 .about__wrap-text {
     display: flex;
@@ -60,6 +71,9 @@ $colorGrad: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
 }
 .about__list {
     margin-bottom: 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 .about__list-item {
     font-family: FuturaDemiC;
@@ -67,6 +81,19 @@ $colorGrad: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
     font-weight: 600;
     line-height: 125%; /* 25px */
     color: #333;
+    position: relative;
+    padding-left: 34px;
+    &::before{
+        content: "";
+        display: flex;
+        width: 20px;
+        height: 20px;
+        background: url("../img/about/about__item-bg.svg");
+        position: absolute;
+        left: 0;
+        top: 3px;
+
+    }
 }
 .about__btn {
     padding: 19px 13.5%;

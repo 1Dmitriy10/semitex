@@ -122,6 +122,8 @@ ul{
 .container{
     max-width: 1281px;
     margin: 0 auto;
+    outline: 1px solid red;
+    
 }
 .btn {
     border-radius: 10px;
@@ -249,3 +251,4 @@ ul{
 @import "./blocks/_certificates.scss";
 @import "./blocks/_chois.scss";
 @import "./blocks/_about.scss";
+@import "./blocks/_delivery.scss";
