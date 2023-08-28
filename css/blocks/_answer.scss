@@ -1,0 +1,105 @@
+// ========================Миксины==============================
+@mixin adaptiveValue ($property, $startSize, $minSize) {
+    $addSize: $startSize - $minSize;
+    // Ширина полотна макета
+    $maxWidth: 1281;                    
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+  }
+//   ====================Переменные=======================
+$colorWhite:#FFF;
+$colorBlack:#111;
+$colorGrad: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
+@function em($px,$size){
+    $result: $px / $size + em;
+    @return $result;
+  }
+  @function rem($px){
+    $result: $px / 16 + rem;
+    @return $result;
+  }
+  @function prop($h,$w){
+    $result: $h / $w * 100%;
+    @return $result;
+  }
+//===================================================
+.answer {
+}
+.answer__container {
+    padding: 8.1% 5px 8.5% 5px;
+}
+.answer__box {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+.answer__title{
+    margin-bottom: 3.3%;
+
+}
+.answer__spoiler-item {
+}
+.answer__spoiler-title{
+    display: flex;
+    width: 100%;
+    border-radius: 10px;
+    // background: #969AF7;
+    background: linear-gradient(90deg, #969AF7 0%, #969AF7 100%);
+    padding: 30px 85px 30px 50px;
+    font-family: FuturaDemiC;
+    @include adaptiveValue(font-size, 24, 15);
+    font-weight: 600;
+    line-height: 116.667%; /* 28px */    
+    color: $colorWhite;
+    transition: 0.8s;
+    &::after{
+        content: "";
+        width: 30px;
+        height: 30px;
+        border: 50%;
+        background-color: white;
+    }
+    &.active{
+        transition: 0.8s;
+        background: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
+    }
+}
+.spoiler-title{
+    position: relative;
+    cursor: pointer;
+    transition: 1s;
+    z-index: 20;
+    &::after{
+        content: "";
+        position: absolute;
+        display: flex;
+        width: 40px;
+        height: 40px;
+        top: 28%;
+        right: 58px;
+        transition: 0.3s;
+        background: url('../img/answer/answer-__arrow.png') 0 0/cover no-repeat;
+        @media (max-width:600px) {
+            right: 20px;
+        }
+    }
+    &.active{
+        transition: 1s;
+        &::after{
+            transform: rotate(180deg);
+            transition: 0.3s;
+        }
+    }
+}
+.answer__spoiler-text{
+    padding: 45px 50px 30px 50px;
+    margin-top: -14px;
+        border-radius: 10px;
+        border: 1px solid #EA4339;
+        background: #FFF;
+        font-family: FuturaBookC;
+        @include adaptiveValue(font-size, 20, 15);
+        font-weight: 400;
+        line-height: 135%; /* 27px */   
+        color: #333;
+}
+

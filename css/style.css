@@ -58,7 +58,7 @@ button {
   background-color: transparent;
 }
 
-ul {
+ul, summary {
   list-style: none;
 }
 
@@ -74,7 +74,6 @@ a {
 .container {
   max-width: 1281px;
   margin: 0 auto;
-  outline: 1px solid red;
 }
 
 .btn {
@@ -200,6 +199,23 @@ a {
 .popup-exit:hover {
   transition: 0.2S;
   transform: scale(1.2);
+}
+
+.spoiler-item {
+  overflow: hidden;
+  transition: 1s;
+}
+
+.spoiler-text {
+  transition: 0.9s;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition-delay: 0.6s;
+}
+.spoiler-text.active {
+  transition: 0.45s;
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .header {
@@ -1478,6 +1494,11 @@ label {
     left: 10px;
   }
 }
+@media (min-width: 1280px) {
+  .delivery__map {
+    height: 450px;
+  }
+}
 
 .delivery__wrap-content {
   display: flex;
@@ -1526,4 +1547,168 @@ label {
   font-weight: 600;
   line-height: 125%; /* 25px */
   color: #FFF;
+}
+
+.answer__container {
+  padding: 8.1% 5px 8.5% 5px;
+}
+
+.answer__box {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.answer__title {
+  margin-bottom: 3.3%;
+}
+
+.answer__spoiler-title {
+  display: flex;
+  width: 100%;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #969AF7 0%, #969AF7 100%);
+  padding: 30px 85px 30px 50px;
+  font-family: FuturaDemiC;
+  font-size: calc(15px + 9 * ((100vw - 320px) / 961));
+  font-weight: 600;
+  line-height: 116.667%; /* 28px */
+  color: #FFF;
+  transition: 0.8s;
+}
+.answer__spoiler-title::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 50%;
+  background-color: white;
+}
+.answer__spoiler-title.active {
+  transition: 0.8s;
+  background: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
+}
+
+.spoiler-title {
+  position: relative;
+  cursor: pointer;
+  transition: 1s;
+  z-index: 20;
+}
+.spoiler-title::after {
+  content: "";
+  position: absolute;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  top: 28%;
+  right: 58px;
+  transition: 0.3s;
+  background: url("../img/answer/answer-__arrow.png") 0 0/cover no-repeat;
+}
+@media (max-width: 600px) {
+  .spoiler-title::after {
+    right: 20px;
+  }
+}
+.spoiler-title.active {
+  transition: 1s;
+}
+.spoiler-title.active::after {
+  transform: rotate(180deg);
+  transition: 0.3s;
+}
+
+.answer__spoiler-text {
+  padding: 45px 50px 30px 50px;
+  margin-top: -14px;
+  border-radius: 10px;
+  border: 1px solid #EA4339;
+  background: #FFF;
+  font-family: FuturaBookC;
+  font-size: calc(15px + 5 * ((100vw - 320px) / 961));
+  font-weight: 400;
+  line-height: 135%; /* 27px */
+  color: #333;
+}
+
+.bottom-components {
+  background: url("../img/bottom-components/bottom-components__bg.png") 40% 0/cover no-repeat;
+}
+
+.bottom-components__container {
+  padding: 12.6% 5px 6.5% 5px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1000px) {
+  .bottom-components__container {
+    flex-direction: column;
+  }
+}
+
+.bottom-components__content-box {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+}
+
+.bottom-components__title {
+  font-family: FuturaDemiC;
+  font-size: calc(30px + 104 * ((100vw - 320px) / 961));
+  font-weight: 600;
+  letter-spacing: 6.7px;
+  text-transform: uppercase;
+  color: #FFF;
+  line-height: 137.8%; /* 184.652px */
+}
+@media (max-width: 1000px) {
+  .bottom-components__title {
+    margin-bottom: 4%;
+  }
+}
+@media (min-width: 1285px) {
+  .bottom-components__title {
+    font-size: 134px;
+  }
+}
+
+.bottom-content__title-white {
+  font-family: FuturaDemiC;
+  font-size: calc(15px + 30 * ((100vw - 320px) / 961));
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 10px 35px 10px 35px;
+  border-radius: 20px;
+  background: #969AF7;
+  color: #FFF;
+  line-height: 186.8%; /* 84.06px */
+  align-self: center;
+  text-align: center;
+}
+@media (min-width: 1285px) {
+  .bottom-content__title-white {
+    font-size: 45px;
+  }
+}
+@media (max-width: 1000px) {
+  .bottom-content__title-white {
+    margin-bottom: 2%;
+  }
+}
+
+@media (max-width: 425px) {
+  .bottom-components__form {
+    display: none !important;
+  }
+}
+
+.footer {
+  background-color: #333333;
+  margin-top: -7px;
+}
+
+@media (max-width: 900px) {
+  .footer__container {
+    justify-content: space-between;
+  }
 }/*# sourceMappingURL=style.css.map */

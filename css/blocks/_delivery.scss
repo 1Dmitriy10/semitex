@@ -62,12 +62,14 @@ $colorGrad: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
   border-radius: 10px;
   @media (max-width:803px) {
     @include adaptiveValue(height,850 ,190 );
-  }
-  
+  } 
   @media (max-width:545px) {
     width: 95.3%;
     top: 10px;
     left: 10px;
+  }
+  @media (min-width:1280px) {
+    height: 450px;
   }
 
 }

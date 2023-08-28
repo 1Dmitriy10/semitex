@@ -1,0 +1,9 @@
+.footer{
+    background-color: #333333;
+    margin-top: -7px;
+}
+.footer__container{
+    @media (max-width:900px) {
+      justify-content: space-between;  
+    }
+}

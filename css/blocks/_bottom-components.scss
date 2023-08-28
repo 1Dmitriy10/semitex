@@ -1,0 +1,80 @@
+// ========================Миксины==============================
+@mixin adaptiveValue ($property, $startSize, $minSize) {
+    $addSize: $startSize - $minSize;
+    // Ширина полотна макета
+    $maxWidth: 1281;                    
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+  }
+//   ====================Переменные=======================
+$colorWhite:#FFF;
+$colorBlack:#111;
+$colorGrad: linear-gradient(90deg, #F58634 0%, #E8363A 100%);
+@function em($px,$size){
+    $result: $px / $size + em;
+    @return $result;
+  }
+  @function rem($px){
+    $result: $px / 16 + rem;
+    @return $result;
+  }
+  @function prop($h,$w){
+    $result: $h / $w * 100%;
+    @return $result;
+  }
+
+//=================================================
+.bottom-components {
+    background: url('../img/bottom-components/bottom-components__bg.png') 40% 0/cover no-repeat;
+}
+.bottom-components__container {
+    padding: 12.6% 5px 6.5% 5px;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width:1000px) {
+        flex-direction: column;
+    }
+}
+.bottom-components__content-box {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+.bottom-components__title {
+    font-family: FuturaDemiC;
+    @include adaptiveValue(font-size, 134, 30);
+    font-weight: 600;
+    letter-spacing: 6.7px;
+    text-transform: uppercase;
+    color: $colorWhite;
+    line-height: 137.8%; /* 184.652px */
+    @media (max-width:1000px) {
+        margin-bottom: 4%;
+    }
+    @media (min-width: 1285px){
+    font-size: 134px;
+    }
+}
+.bottom-content__title-white {
+    font-family: FuturaDemiC;
+    @include adaptiveValue(font-size, 45, 15);
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 10px 35px 10px 35px;
+    border-radius: 20px;
+    background: #969AF7;
+    color: $colorWhite;
+    line-height: 186.8%; /* 84.06px */
+    align-self: center;
+    text-align: center;
+    @media (min-width: 1285px){
+        font-size: 45px;
+        }
+    @media (max-width:1000px) {
+        margin-bottom: 2%;
+    }
+}
+.bottom-components__form {
+    @media (max-width:425px) {
+        display: none !important;
+    }
+}

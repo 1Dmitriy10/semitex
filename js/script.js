@@ -21,3 +21,5 @@ import { getPopup } from "./popup.js";
 getPopup()
 //Сортировка списка по вертикали
 import { list } from "./choisList.js";
+//Спойлеры
+import { getSpoiler } from "./spoiler.js";

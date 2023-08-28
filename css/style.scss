@@ -107,7 +107,7 @@ button {
     border: transparent;
     background-color: transparent;
   }
-ul{
+ul,summary{
     list-style: none;
   }
   a{
@@ -122,7 +122,7 @@ ul{
 .container{
     max-width: 1281px;
     margin: 0 auto;
-    outline: 1px solid red;
+    // outline: 1px solid red;
     
 }
 .btn {
@@ -239,6 +239,23 @@ ul{
         transform: scale(1.2)
     }
 }
+.spoiler-box {
+}
+.spoiler-item {
+    overflow: hidden;
+    transition: 1s;
+}
+.spoiler-text{
+    transition:  0.9s;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition-delay: 0.6s;
+    &.active{
+        transition: 0.45s;
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 // =======Блоки================================
 @import "./blocks/_header.scss";
@@ -252,3 +269,6 @@ ul{
 @import "./blocks/_chois.scss";
 @import "./blocks/_about.scss";
 @import "./blocks/_delivery.scss";
+@import "./blocks/_answer.scss";
+@import "./blocks/_bottom-components.scss";
+@import "./blocks/_footer.scss";
